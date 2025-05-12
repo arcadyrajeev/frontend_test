@@ -4,7 +4,7 @@ import "../styles/Home.css";
 
 export default function HomeHero() {
   return (
-    <div className="hero1">
+    <div className="hero">
       <div className="behind-boxes">
         <div className="box" id="behind1">
           first
