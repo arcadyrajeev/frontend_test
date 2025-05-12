@@ -1,0 +1,69 @@
+.hero {
+  height: 300vh;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.behind-boxes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.front-boxes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.box {
+  position: absolute;
+  display: flex;
+  width: 6vw;
+  height: 6vw;
+}
+
+/* Behind boxes */
+#behind1 {
+  top: 15;
+  left: 10%;
+  background-color: darkcyan;
+}
+
+#behind2 {
+  top: 15%;
+  right: 10%;
+  background-color: darkcyan;
+}
+
+/* Front boxes */
+#front1 {
+  top: 10%;
+  left: 15%;
+  background-color: rgb(79, 67, 107);
+}
+
+#front2 {
+  top: 10%;
+  right: 15%;
+  background-color: rgb(79, 67, 107);
+}
+
+#front3 {
+  top: 20%;
+  left: 15%;
+  background-color: rgb(99, 42, 50);
+}
+
+#front4 {
+  top: 20%;
+  right: 15%;
+  background-color: rgb(99, 42, 50);
+}/*# sourceMappingURL=Home.css.map */
