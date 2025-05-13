@@ -22,11 +22,19 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "oswald";
+  src: url("../assets/fonts/Oswald-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 .hero {
-  height: 200vh;
+  position: absolute;
+  display: flex;
+  height: 100vh;
   width: 100%;
   position: relative;
-  z-index: -1;
+  z-index: -2;
   overflow: hidden;
 }
 
@@ -36,6 +44,7 @@
   height: 100%;
   top: 0;
   left: 0;
+  z-index: -1;
 }
 
 .front-boxes {
@@ -93,9 +102,15 @@
 }
 
 .large-text {
-  font-family: "big";
+  display: flex;
+  background-color: aqua;
+  padding: 3vw;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "oswald";
   font-weight: 900;
-  font-size: 20vw;
+  font-size: 26vw;
+  z-index: 0;
 }
 
 .text-section {
@@ -112,7 +127,7 @@
   font-family: "medium";
   font-size: 2rem;
   padding-block: 3vw;
-  padding-inline: 18vw;
+  padding-inline: 17vw;
   font-weight: 600;
   text-align: center;
 }
