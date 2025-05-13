@@ -1,6 +1,12 @@
 @font-face {
-  font-family: "long";
+  font-family: "big";
   src: url("../assets/fonts/BigShoulders_36pt-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "impact";
+  src: url("../assets/fonts/impact.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -11,7 +17,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "big";
+  font-family: "anton";
   src: url("../assets/fonts/Antonio-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -87,13 +93,16 @@
 }
 
 .large-text {
-  font-family: "long";
+  font-family: "big";
   font-weight: 900;
   font-size: 20vw;
 }
 
 .text-section {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding-block: 3vw;
   padding-inline: 6vw;
   background-color: #fff;
@@ -102,7 +111,7 @@
   color: black;
   font-family: "medium";
   font-size: 2rem;
-  padding-block: 6vw;
+  padding-block: 3vw;
   padding-inline: 18vw;
   font-weight: 600;
   text-align: center;
@@ -110,10 +119,57 @@
 .text-section .bigtext-container {
   color: black;
   text-transform: uppercase;
-  font-family: "long";
+  font-family: "big";
   font-size: 8vw;
   padding-block: 3vw;
   padding-inline: 4vw;
-  font-weight: 500;
+  font-weight: 800;
   text-align: center;
+}
+.text-section .button-wrapper {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.cta-button {
+  display: flex;
+  flex-direction: column;
+  font-family: "medium";
+  gap: 1vw;
+  font-size: 2vw; /* Only one font-size definition */
+  width: 15vw;
+  height: 5vw; /* Height remains fixed */
+  justify-content: center;
+  align-items: center; /* Center the button content horizontally */
+  z-index: 2; /* Make sure the button is above other content */
+  cursor: pointer;
+}
+.cta-button:hover .upper {
+  transform: scaleY(0);
+}
+.cta-button:hover .lower {
+  transform: scaleY(1);
+}
+.cta-button .upper, .cta-button .lower {
+  display: block;
+  position: absolute;
+  background-color: #221edb;
+  color: #fff;
+  border-radius: 0.3rem;
+  font-size: 1.1vw;
+  font-weight: 500;
+  padding-block: 1.2vw;
+  padding-inline: 2.4vw;
+  transition: transform 0.3s cubic-bezier(0, -0.2, 0.58, 1);
+}
+.cta-button .lower {
+  margin-top: 0.3vw;
+  color: black;
+  transform-origin: bottom;
+  transform: scaleY(0); /* Start off hidden */
+}
+.cta-button .upper {
+  transform-origin: top;
 }/*# sourceMappingURL=main.css.map */

@@ -58,14 +58,26 @@
 }
 
 @font-face {
-  font-family: "long";
+  font-family: "big";
   src: url("../assets/fonts/BigShoulders_36pt-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "impact";
+  src: url("../assets/fonts/impact.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "medium";
   src: url("../assets/fonts/InstrumentSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "anton";
+  src: url("../assets/fonts/Antonio-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -91,7 +103,7 @@
   display: flex;
   width: 92%;
   text-align: center;
-  font-family: "long";
+  font-family: "big";
   font-size: 1.5vw;
   font-weight: 600;
   letter-spacing: 0.4vw;
