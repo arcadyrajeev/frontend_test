@@ -1,6 +1,6 @@
 @font-face {
   font-family: "big";
-  src: url("../assets/fonts/BigShoulders_36pt-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/BigShoulders-VariableFont_opsz,wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -12,7 +12,7 @@
 }
 @font-face {
   font-family: "medium";
-  src: url("../assets/fonts/InstrumentSans-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/InstrumentSans-VariableFont_wdth,wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -25,6 +25,12 @@
 @font-face {
   font-family: "oswald";
   src: url("../assets/fonts/Oswald-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "league";
+  src: url("../assets/fonts/LeagueGothic-Regular-VariableFont_wdth.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -103,18 +109,20 @@
 
 .large-text {
   display: flex;
-  background-color: aqua;
   padding: 3vw;
   white-space: nowrap;
   position: absolute;
-  font-family: "oswald";
+  font-family: "big";
   font-weight: 900;
-  font-size: 26vw;
+  font-size: 25vw;
   z-index: 0;
 }
 
 .text-section {
   display: flex;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -123,6 +131,7 @@
   background-color: #fff;
 }
 .text-section .text-container {
+  display: flex;
   color: black;
   font-family: "medium";
   font-size: 2rem;
@@ -130,6 +139,17 @@
   padding-inline: 17vw;
   font-weight: 600;
   text-align: center;
+}
+.text-section .text-cover {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f14444;
+  box-shadow: 2vw 0vw 3vw 8vw rgb(238, 58, 58);
+  z-index: 5; /* Ensures the cover is above the text */
+  pointer-events: none; /* Ensures the cover does not block interaction with the text */
+  transition: transform 1s ease-in-out;
 }
 .text-section .bigtext-container {
   color: black;
@@ -187,4 +207,64 @@
 }
 .cta-button .upper {
   transform-origin: top;
+}
+
+.dual-card {
+  display: flex;
+  width: 100vw;
+  background-color: #ececec;
+  padding-inline: 4vw;
+  padding-block: 0.2vw;
+}
+.dual-card .image-block {
+  display: flex;
+  width: 50%;
+  height: 30vw;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+.dual-card .text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.5vw;
+  padding: 4.6vw 3.8vw;
+  padding-bottom: 3.8vw;
+  color: #fff;
+  width: 50%;
+  background-color: #0a0a0a;
+}
+.dual-card .text-block .heading {
+  text-transform: uppercase;
+  font-family: "anton";
+  font-size: 4rem;
+  font-weight: 300;
+  transform: scaleX(1.2);
+  transform-origin: left;
+}
+.dual-card .text-block .bodytext {
+  font-family: "medium";
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.dual-card .text-block .points-box {
+  display: flex;
+  flex-wrap: wrap; /* Key property: allows wrapping */
+  gap: 1rem; /* Optional: space between items */
+  justify-content: flex-start;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 2vw;
+}
+.dual-card .text-block .points-box .points {
+  display: flex;
+  font-family: "medium";
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #272727;
+  color: white;
+  padding: 0.8vw 1.8vw;
+  font-size: 1.2vw;
 }/*# sourceMappingURL=main.css.map */
