@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import React from "react";
-import "../styles/Home.css";
+import "../styles/main.css";
 
 export default function HomeHero() {
   return (
@@ -13,6 +13,7 @@ export default function HomeHero() {
           second
         </div>
       </div>
+      <div className="large-text">DIGITAL INNOVATION STUDIO</div>
       <div className="front-boxes">
         <div className="box" id="front1">
           first

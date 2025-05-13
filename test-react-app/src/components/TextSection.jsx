@@ -1,11 +1,10 @@
-import { NavLink } from "react-router-dom";
 import React from "react";
-import "../styles/Home.css";
+import "../styles/main.css";
 
-export default function HomeHero() {
+export default function TextSection({ text, classn = "text-container" }) {
   return (
     <div className="text-section">
-      <div className="text-container"></div>
+      <div className={classn}>{text}</div>
     </div>
   );
 }

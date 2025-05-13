@@ -9,4 +9,10 @@
   src: url("../assets/fonts/InstrumentSans-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: "big";
+  src: url("../assets/fonts/Antonio-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }/*# sourceMappingURL=fonts.css.map */

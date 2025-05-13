@@ -1,5 +1,7 @@
+@import './Fonts/fonts';
+
 .hero {
-  height: 300vh;
+  height:200vh;
   width: 100%;
   position: relative;
   z-index: -1;
@@ -26,8 +28,8 @@
 .box {
   position: absolute; // important
   display: flex;
-  width: 6vw;
-  height: 6vw;
+  width: 8vw;
+  height: 12vw;
 }
 
 /* Behind boxes */
@@ -67,3 +69,38 @@
   right: 15%;
   background-color: rgb(99, 42, 50);
 }
+
+.large-text{
+  font-family: 'long';
+  font-weight: 900;
+  font-size: 20vw;
+}
+
+.text-section{
+ display: flex;
+ padding-block: 3vw;
+ padding-inline: 6vw;
+ background-color: #fff;
+
+ .text-container{
+    color: black;
+    font-family: 'medium';
+    font-size: 2rem;
+    padding-block: 6vw;
+    padding-inline: 18vw;
+    font-weight: 600;
+    text-align: center;
+ }
+
+  .bigtext-container{
+    color: black;
+    text-transform: uppercase;
+    font-family: 'long';
+    font-size: 8vw;
+    padding-block: 3vw;
+    padding-inline: 4vw;
+    font-weight: 500;
+    text-align: center;
+ }
+}
+
