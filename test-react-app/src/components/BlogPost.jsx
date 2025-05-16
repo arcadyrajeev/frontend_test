@@ -16,8 +16,8 @@ export default function BlogPost({
       <div className="image-container">
         <img src={imglink} />
         <div className="wrapperbox">
-          <div className="in-box">↗️</div>
-          <div className="in-box">↗️</div>
+          <div className="in-box">↗</div>
+          <div className="in-box">↗</div>
         </div>
       </div>
       <div className="data-container">

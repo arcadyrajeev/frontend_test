@@ -141,7 +141,7 @@ padding-inline: 4vw;
         cursor: pointer;
 
         &:hover .in-box {
-        transform: translateX(3vw);
+        transform: translateX(3vw) ;
         }
 
         img{
@@ -173,11 +173,12 @@ padding-inline: 4vw;
         flex-wrap: nowrap;
         overflow:hidden;
         padding: 0%;
+        background-color: #221edb;
 
         .in-box{
             color: #ececec;
             display: flex;
-            height: 3vw;
+            height: fit-content;
             min-width: 3vw;
             flex-wrap: nowrap;
             justify-content: center;
