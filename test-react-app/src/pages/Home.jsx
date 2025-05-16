@@ -35,7 +35,7 @@ export default function Home() {
 
       {/* Hero section */}
       <div className="hero-section">
-        <Hero />
+        <Hero text="DIGITAL INNOVATION STUDIO" />
       </div>
 
       {/* text section */}

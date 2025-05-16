@@ -3,13 +3,12 @@
 
 
 
-.outer-wrapper {
-  width: 100%;
-}
 
 .sticky-header {
+  width: 100vw;
   position: relative;
-  height: 200vh;
+  
+  height: 100vh;
 
 }
 
@@ -23,7 +22,7 @@
   width: 250vw; /* Adjust this to make scrolling longer */
   height: 100vh;
   align-items: center;
-  padding-left: 5vw;
+  padding-inline: 5vw;
   will-change: transform;
   
 }
