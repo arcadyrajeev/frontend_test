@@ -19,7 +19,7 @@ export default function Footer() {
               Work
               <hr />
             </NavLink>
-            <NavLink to={"/about"} className="menu-option">
+            <NavLink to={"/"} className="menu-option">
               About
               <hr />
             </NavLink>

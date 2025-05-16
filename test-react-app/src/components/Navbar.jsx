@@ -5,10 +5,10 @@ import "../styles/Navbar.css";
 export default function Navbar() {
   return (
     <div className="navbar">
-      <div className="left">
+      <NavLink to={"/"} className="left">
         <hr></hr>
         <div className="name">STUDIO</div>
-      </div>
+      </NavLink>
       <div className="right">
         <NavLink to={"/"} className="nav-options">
           <div className="optiontext">
@@ -18,7 +18,7 @@ export default function Navbar() {
           <hr />
         </NavLink>
         <h2>,</h2>
-        <NavLink to={"/work"} className="nav-options">
+        <NavLink to={"/works"} className="nav-options">
           <div className="optiontext">
             <div className="optiontext__box">Works</div>
             <div className="optiontext__box">Works</div>
