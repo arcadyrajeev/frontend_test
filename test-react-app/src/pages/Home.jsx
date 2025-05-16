@@ -28,14 +28,17 @@ import blog3 from "../assets/images/blog3.avif";
 export default function Home() {
   return (
     <div>
+      {/* Navbar */}
       <div className="head">
         <Navbar />
       </div>
 
+      {/* Hero section */}
       <div className="hero-section">
         <Hero />
       </div>
 
+      {/* text section */}
       <div className="text-section">
         <TextSection
           text="Digital Innovation Studio is a forward-thinking agency that transforms
@@ -54,6 +57,7 @@ export default function Home() {
         </TextSection>
       </div>
 
+      {/* sections with two cards*/}
       <div className="dualcard-wrapper">
         {" "}
         <DualCard
@@ -89,6 +93,7 @@ export default function Home() {
         </DualCard>
       </div>
 
+      {/* Big text section  section */}
       <div className="big-wrapper">
         <BigTextCard />
       </div>
@@ -99,6 +104,7 @@ export default function Home() {
         </TextSection>
       </div>
 
+      {/* Blogs section */}
       <div className="blog-wrapper">
         <BlogPost
           imglink={blog1}
@@ -128,10 +134,12 @@ export default function Home() {
         />
       </div>
 
+      {/* infinite scrolling text  */}
       <div>
         <MarqueeText />
       </div>
 
+      {/* Footer section */}
       <div>
         <Footer />
       </div>
