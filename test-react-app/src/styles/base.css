@@ -46,6 +46,15 @@ position: relative;
 
 }
 
+.wide-card-wrapper{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(233, 233, 233);
+  justify-content: space-between;
+  padding-bottom: 8vw;
+}
+
 .blog-wrapper{
   width: 100%;
   display: flex;

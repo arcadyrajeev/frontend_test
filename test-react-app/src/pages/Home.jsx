@@ -19,9 +19,14 @@ import image1 from "../assets/images/image1.avif";
 import image2 from "../assets/images/image2.avif";
 import image3 from "../assets/images/image3.avif";
 
+import web1 from "../assets/images/landlite_ing_1.jpg";
+import web2 from "../assets/images/elegance_img_1.jpg";
+import web3 from "../assets/images/bombay_royal_img_1.jpg";
+
 import blog1 from "../assets/images/blog1.avif";
 import blog2 from "../assets/images/blog2.avif";
 import blog3 from "../assets/images/blog3.avif";
+import WideWeb from "../components/WideWebsiteCard";
 
 //Home page
 
@@ -46,7 +51,16 @@ export default function Home() {
         innovative web solutions, captivating designs, and strategic digital
         transformations that help brands make a splash in the digital world."
         />
+      </div>
 
+      {/* website showcase section */}
+      <div className="wide-web-wrapper">
+        <WideWeb imglink={web1} title="LANDLITE" />
+        <WideWeb imglink={web2} title="ELEGANCE" />
+        <WideWeb imglink={web3} title="BOMBAY ROYAL" />
+      </div>
+
+      <div className="text-section">
         <TextSection
           text='"Working with Digital Innovation Studio was an exceptional experience from start to finish."'
           classn="bigtext-container"
