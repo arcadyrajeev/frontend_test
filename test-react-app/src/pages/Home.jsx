@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div>
       {/* Navbar */}
-      <div className="head">
+      <div className="head" id="navbar">
         <Navbar />
       </div>
 

@@ -63,13 +63,17 @@ export default function Footer() {
         <NavLink to={"/"} className="copy-link">
           Copyright © Digital Innovation Studio — made by Rajeev
         </NavLink>
-        <NavLink to={"/"} className="backtotop">
+        <a
+          href="#navbar"
+          className="backtotop"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
           <span>Back To Top </span>
           <div className="arrowbox">
-            <div className="box">⬆️</div>
-            <div className="box">⬆️</div>
+            <div className="box">↑</div>
+            <div className="box">↑</div>
           </div>
-        </NavLink>
+        </a>
       </div>
     </div>
   );
