@@ -33,4 +33,10 @@
   src: url("../assets/fonts/LeagueGothic-Regular-VariableFont_wdth.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: "coolvetica";
+  src: url("../assets/fonts/Coolvetica Rg Cond.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }/*# sourceMappingURL=fonts.css.map */

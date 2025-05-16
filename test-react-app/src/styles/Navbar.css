@@ -93,15 +93,23 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "coolvetica";
+  src: url("../assets/fonts/Coolvetica Rg Cond.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 .navbar {
   width: 100%;
   padding-inline: 3vw 6vw;
+  position: relative;
   margin: 0;
   height: 8vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  z-index: 10;
 }
 
 .left {

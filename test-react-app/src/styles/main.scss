@@ -1,103 +1,62 @@
+@import './Animations/animation';
 @import './Fonts/fonts';
 
-.hero {
-  position: absolute;
-  display: flex;
-  height:100vh;
+
+
+.outer-wrapper {
   width: 100%;
+}
+
+.sticky-header {
   position: relative;
+  height: 200vh;
+
+}
+
+.sticky-content {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left:0;
   z-index: -2;
-  overflow: hidden; // Optional: prevents boxes from overflowing
-}
-
-.behind-boxes {
-  position: absolute;
-  width: 80%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.front-boxes {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.box {
-  position: absolute; // important
-  display: flex;
-  width: 8vw;
-  height: 12vw;
-}
-
-/* Behind boxes */
-#behind1 {
-  top: 15;
-  left: 10%;
-  background-color: darkcyan;
-}
-
-#behind2 {
-  top: 15%;
-  right: 10%;
-  background-color: darkcyan;
-}
-
-/* Front boxes */
-#front1 {
-  top: 10%;
-  left: 15%;
-  background-color: rgb(79, 67, 107);
-}
-
-#front2 {
-  top: 10%;
-  right: 15%;
-  background-color: rgb(79, 67, 107);
-}
-
-#front3 {
-  top: 20%;
-  left: 15%;
-  background-color: rgb(99, 42, 50);
-}
-
-#front4 {
-  top: 20%;
-  right: 15%;
-  background-color: rgb(99, 42, 50);
-}
-
-.large-text{
-  display: flex;
-  padding: 3vw;
   white-space: nowrap;
-  position: absolute;
-  font-family: 'big';
-  font-weight: 900;
-  font-size: 25vw;
-  z-index: 0;
+  width: 250vw; /* Adjust this to make scrolling longer */
+  height: 100vh;
+  align-items: center;
+  padding-left: 5vw;
+  will-change: transform;
+  
 }
 
-.text-section{
+.sticky-content h1 {
+  font-size: 25vw;
+  font-family: "coolvetica", sans-serif;
+  font-weight: 400;
+  color: #111;
+}
+
+
+
+
+
+.text-card{
  display: flex;
- position: relative;
- z-index: 3;
- overflow: hidden;
  flex-direction: column;
  align-items: center;
  justify-content: center;
  padding-block: 3vw;
  padding-inline: 6vw;
- background-color: #fff;
+ background-color: #ffffff;
+
+
+  .button-wrapper{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+ }
 
  .text-container{
-  display: flex;
+    display: flex;
     color: black;
     font-family: 'medium';
     font-size: 2rem;
@@ -107,142 +66,121 @@
     text-align: center;
  }
 
-    .text-cover{
-      display: flex;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: #f14444;
-     box-shadow: 2vw 0vw 3vw 8vw rgba(238, 58, 58, 1);;
-      z-index: 5; /* Ensures the cover is above the text */
-      pointer-events: none; /* Ensures the cover does not block interaction with the text */
-      transition: transform 1s ease-in-out;
-    }
 
   .bigtext-container{
     color: black;
     text-transform: uppercase;
-    font-family: 'big';
-    font-size: 8vw;
+    font-family: 'coolvetica';
+    font-size: 9vw;
     padding-block: 3vw;
     padding-inline: 4vw;
-    font-weight: 800;
+    line-height: 1;
+    font-weight: 400;
     text-align: center;
- }
 
- .button-wrapper{
-  width: fit-content;
-  height: fit-content;
 
  }
+
 }
 
-.cta-button {
+.bigtextcard{
   display: flex;
+  position: relative;
   flex-direction: column;
-  font-family: 'medium';
-  gap: 1vw;
-  font-size: 2vw; /* Only one font-size definition */
-  width: 15vw;
-  height: 5vw; /* Height remains fixed */
-  justify-content: center;
-  align-items: center; /* Center the button content horizontally */
-  z-index: 2; /* Make sure the button is above other content */
+  gap: 0;
+  width: 100%;
+  height: 160vh;
+  background-color: #fff;
+
+
+  .large-text{
+    margin: 0%;
+    padding: 0;
+    padding-left: 4vw;
+    line-height: 0.8;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    
+    width: fit-content;
+    height: fit-content;
+
+    h1{
+       font-family: 'coolvetica';
+      font-size: 28vw;
+      font-weight: 100;
+      letter-spacing: 0.1vw;
+    }
+
+
+
+    .image-container{
+      overflow: hidden;
+      border-radius: 0.5rem;
+      margin-left: 5vw;
+      display: flex;
+      width: 28vw;
+      height: 12vw;
+      background-color: white;
+    
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
+
+
+
+
+.scroll-container {
+ width: 100%;
+ display: flex;
+  overflow: hidden;
+  background: #111;
+  color: white;
+  white-space: nowrap;
   cursor: pointer;
 
-  &:hover .upper{
-    transform: scaleY(0);
+  &:hover{
+    background-color: #fff;
+    color: #0a0a0a;
   }
 
-  &:hover .lower{
-    transform: scaleY(1);
-  }
-  .upper, .lower {
-    display: block;
-    position: absolute;
-    background-color: #221edb;
-    color: #fff;
-    border-radius: 0.3rem;
-    font-size: 1.1vw;
-    font-weight: 500;
-    padding-block: 1.2vw;
-    padding-inline: 2.4vw;
-    transition: transform 0.3s cubic-bezier(0, -0.2, 0.58, 1);
-  }
-  
-.lower {
-  margin-top: 0.3vw;
-  color: black;
-  transform-origin: bottom;
-  transform: scaleY(0); /* Start off hidden */
-}
-
-.upper {
-  transform-origin: top;
-}
-}
-
-.dual-card{
-display: flex;
-width: 100vw;
-background-color: #ececec;
-padding-inline: 4vw;
-padding-block: 0.2vw;
-
-  .image-block{
-    display: flex;
-    width: 50%;
-    height: 30vw;
-    border-radius: 0.5rem;
-    background-color: white;
-  }
-
-  .text-block{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 1.5vw;
-    padding: 4.6vw 3.8vw;
-    padding-bottom: 3.8vw;
-    color: #fff;
-    width: 50%;
+  &:hover .scroll-text hr{
     background-color: #0a0a0a;
-
-    .heading{
-      text-transform: uppercase;
-      font-family: 'anton';
-      font-size: 4rem;
-      font-weight: 300;
-      transform: scaleX(1.2);
-      transform-origin: left;
-    }
-
-    .bodytext{
-      font-family: 'medium';
-      font-size: 2rem;
-      font-weight: bold;
-      line-height: 1.4;
-
-    }
-
-    .points-box{
-      display: flex;
-      flex-wrap: wrap;      /* Key property: allows wrapping */
-      gap: 1rem;            /* Optional: space between items */
-      justify-content: flex-start;
-      width: 100%;
-      height: fit-content;
-      margin-top: 2vw;
-
-      .points{
-          display: flex;
-          font-family: 'medium';
-          width: fit-content;
-          background-color: #272727;
-          color: white;
-          padding: 0.8vw 1.8vw;
-          font-size: 1.2vw;
-        }
-    }
   }
+
 }
+
+.scroll-content{
+  display: inline-flex;
+  animation: marquee 10s linear infinite;
+
+}
+
+.scroll-text{
+  display: flex;
+  align-items: center;
+   font-family: 'coolvetica';
+   font-weight: 200;
+  font-size: 26vw;
+}
+
+.scroll-text hr {
+  display: inline-block;
+  width: 10vw;
+  height: 0.5px;
+  background: #fff;
+  border: none;
+  margin: 0 20px;
+  vertical-align: middle;
+}
+
+
+

@@ -1,15 +1,20 @@
 @import './Animations/animation';
 @import './Fonts/fonts';
 
+
+
+
 .navbar {
   width: 100%;
   padding-inline: 3vw 6vw;
+  position: relative;
   margin: 0;
   height: 8vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  z-index: 10;
 }
 
 .left {
