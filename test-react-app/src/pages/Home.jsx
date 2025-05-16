@@ -84,6 +84,7 @@ export default function Home() {
           <PointBlock text="Market Analysis" />
           <PointBlock text="ROI Optimization" />
         </DualCard>
+        {/*Flipping the card using row-reverese */}
         <DualCard
           imglink={image2}
           heading="ui/ux design"
