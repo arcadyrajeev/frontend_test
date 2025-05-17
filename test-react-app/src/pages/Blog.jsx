@@ -8,18 +8,14 @@ import Hero from "../components/Hero";
 import BlogPost from "../components/BlogPost";
 import MarqueeText from "../components/MarqueeText";
 
-// fake database (api)
-import { fetchBlogPosts } from "../database/BlogMockDB";
-
 export default function Blog() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    const getData = async () => {
-      const data = await fetchBlogPosts(); // fetch from DB or local JSON
-      setPosts(data);
-    };
-    getData();
+    //fake database fetch
+    fetch("src/database/blogPosts.json")
+      .then((res) => res.json())
+      .then((data) => setPosts(data));
   }, []);
 
   return (
