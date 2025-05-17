@@ -1,15 +1,21 @@
 import React, { useRef, useEffect } from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useMotionValueEvent,
+} from "framer-motion";
 import Navbar from "../components/Navbar";
 import "../styles/base.css";
 import "../styles/main.css";
 import "../styles/components.css";
 
-import Hero from "../components/Hero";
+import HomeHero from "../components/HomeHero";
 import TextSection from "../components/TextSection";
 import CTA from "../components/CTAButton";
 import DualCard from "../components/DualCard";
 import PointBlock from "../components/PointBlock";
-
+import WideWeb from "../components/WideWebsiteCard";
 import BigTextCard from "../components/BigTextCard";
 import MarqueeText from "../components/MarqueeText";
 import Footer from "../components/Footer";
@@ -26,7 +32,6 @@ import web3 from "../assets/images/bombay_royal_img_1.jpg";
 import blog1 from "../assets/images/blog1.avif";
 import blog2 from "../assets/images/blog2.avif";
 import blog3 from "../assets/images/blog3.avif";
-import WideWeb from "../components/WideWebsiteCard";
 
 //Home page
 
@@ -40,7 +45,7 @@ export default function Home() {
 
       {/* Hero section */}
       <div className="hero-section">
-        <Hero text="DIGITAL INNOVATION STUDIO" />
+        <HomeHero text="DIGITAL INNOVATION STUDIO" />
       </div>
 
       {/* text section */}
@@ -65,7 +70,8 @@ export default function Home() {
           text='"Working with Digital Innovation Studio was an exceptional experience from start to finish."'
           classn="bigtext-container"
         />
-
+      </div>
+      <div className="text-section">
         <TextSection text="Our expertise is in designing visuals that effectively connect with the target audience.">
           <CTA text="WORK WITH US" link="/" />
         </TextSection>
